@@ -2,6 +2,8 @@
 
 // References:
 // https://blog.udacity.com/2020/03/c-maps-explained.html
+// https://docs.oracle.com/javase/tutorial/java/concepts/interface.html
+// https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?redirectedfrom=MSDN&view=netcore-3.1
 
 #include <iostream>
 #include <map>
