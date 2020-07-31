@@ -1,9 +1,10 @@
+// https://www.hackerrank.com/challenges/30-review-loop/problem
+// Learning links: https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
 #include <iostream>
-// https://www.hackerrank.com/challenges/30-review-loop/problem
-
 #include <algorithm>
 #include <string>
 using namespace std;
