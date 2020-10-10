@@ -1,0 +1,57 @@
+// https://www.geeksforgeeks.org/print-all-pairs-with-given-sum/
+// Using Dictionary
+// Assumption: All the numbers are positive
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+
+            string[] input = Console.ReadLine().Split(' ');
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = int.Parse(input[i]);
+            }
+
+            PairsWithGivenSum(arr, k);
+        }
+
+        static int PairsWithGivenSum(int[] arr, int sum)
+        {
+            var dictionary = new Dictionary<int, int>();
+            int count = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int remainder = sum - arr[i];
+
+                if (remainder < 0)
+                    continue;
+
+                if (dictionary.ContainsKey(remainder))
+                {
+                    count += dictionary[remainder];
+                }
+
+                if (dictionary.ContainsKey(arr[i]))
+                {
+                    dictionary[arr[i]]++;
+                }
+                else
+                {
+                    dictionary.Add(arr[i], 1);
+                }
+            }
+
+            return count;
+        }
+    }
+}
